@@ -18,6 +18,8 @@ RegisterCommand('givecash', function(source, args, rawCommand)
                 TriggerClientEvent('esx:showNotification', source, 'You gave $' .. amount .. ' to ' .. GetPlayerName(target.source))
                 target.addMoney(amount)
                 TriggerClientEvent('esx:showNotification', target.source, 'You received $' .. amount .. ' from ' .. GetPlayerName(source))
+            else
+                TriggerClientEvent('esx:showNotification', source, 'You are too far away from ' .. GetPlayerName(target.source))
             end
         else
             TriggerClientEvent('esx:showNotification', source, 'Invalid amount')

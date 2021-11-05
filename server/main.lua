@@ -15,9 +15,9 @@ RegisterCommand('givecash', function(source, args, rawCommand)
                 local money = tonumber(args[2])
 
                 xPlayer.removeMoney(amount)
-                TriggerClientEvent('esx:showNotification', source, 'You gave ' .. amount .. '$ to ' .. GetPlayerName(target.source))
+                TriggerClientEvent('esx:showNotification', source, 'You gave $' .. amount .. ' to ' .. GetPlayerName(target.source))
                 target.addMoney(amount)
-                TriggerClientEvent('esx:showNotification', target.source, 'You received ' .. amount .. '$ from ' .. GetPlayerName(source))
+                TriggerClientEvent('esx:showNotification', target.source, 'You received $' .. amount .. ' from ' .. GetPlayerName(source))
             end
         else
             TriggerClientEvent('esx:showNotification', source, 'Invalid amount')

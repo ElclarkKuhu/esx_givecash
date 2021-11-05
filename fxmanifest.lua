@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 
 author 'Elclark'
-version '1.0.0'
+version '1.0.1'
 description 'Givecash to player near you'
 
 game 'gta5'

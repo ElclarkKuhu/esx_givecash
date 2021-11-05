@@ -2,16 +2,11 @@ RegisterCommand('givecash', function(source, args, rawCommand)
     local xPlayer = ESX.GetPlayerFromId(source)
     local target = ESX.GetPlayerFromId(tonumber(args[1]))
     
-    local playerPed = GetPlayerPed(source)
-    local targetPed = GetPlayerPed(tonumber(args[1]))
-
-    local playerCoords = GetEntityCoords(playerPed)
-    local targetCoords = GetEntityCoords(targetPed)
-
-    if #(playerCoords - targetCoords) < config.range then
-        local money = tonumber(args[2])
-
-        xPlayer.removeMoney(money)
-        target.addMoney(money)
+    if target ~= nil then
+        local amount = tonumber(args[2])
+        if amount ~= nil then
+            xPlayer.removeMoney(amount)
+            target.addMoney(amount)
+        end
     end
 end, false)

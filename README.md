@@ -1,5 +1,5 @@
 # esx_givecash
-add /givecash <player> <amount>
+add `/givecash <playerId> <amount>` and `/givedirtycash <playerId> <amount>`
 with distance check `(default: 5)`
 
 # Requirements
